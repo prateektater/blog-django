@@ -1,1 +1,15 @@
-<h1>Hi there</h1>
+<h1>Bolgger</h1>
+
+<h2>latest post</h2>
+
+{% for post in posts.all%}
+
+{{ post.title}}
+<br>
+
+{{post.pub_date_pretty}}
+<br>
+{{post.summary}}
+<br>
+<br>
+{%endfor%}

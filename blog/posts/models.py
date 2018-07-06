@@ -9,4 +9,11 @@ class Post(models.Model):
 	body = models.TextField()
 
 	def __str__(self):
-		return self.title 
+		return self.title
+
+	def pub_date_pretty(self):
+		return self.pub_date.strftime('%b %e %y')
+
+	def summary(self):
+		return self.body[:20]
+
